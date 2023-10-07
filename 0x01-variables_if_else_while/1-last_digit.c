@@ -1,19 +1,19 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio>
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints a text according number
  *
  * Return: Always (Success)
  */
 int main(void)
 {
-	int n;
+	int n, lastd;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-		lastd = n % 10;
+	lastd = n % 10;
 
 	if (lastd > 5)
 	{
