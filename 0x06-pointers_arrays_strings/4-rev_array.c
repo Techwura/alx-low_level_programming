@@ -6,15 +6,15 @@
  *
  * Return: void
  */
-void reverse_array(int *c, int m)
+void reverse_array(int *a, int n)
 {
-	int i;
-	int u;
+	int d;
+	int b;
 
-	for (i = 0; i < m--; i++)
+	for (d = 0; d < n--; d++)
 	{
-		u = c[i];
-		c[i] = c[m];
-		c[m] = u;
+		b = a[d];
+		a[d] = a[n];
+		a[n] = b;
 	}
 }
