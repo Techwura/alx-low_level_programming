@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _pow_recursion - function name
  * @x: parameter 1
