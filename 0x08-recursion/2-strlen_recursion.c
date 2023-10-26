@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _strlen_recursion - main function
  * @s: string to be measured
@@ -6,7 +6,7 @@ nclude "main.h"
  */
 int _strlen_recursion(char *s)
 {
-	int lnt = 0;
+	int longit = 0;
 
 	if (*s)
 	{
