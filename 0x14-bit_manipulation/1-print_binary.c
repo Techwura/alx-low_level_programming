@@ -1,48 +1,39 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
 
 /**
- * _pow - func calculates (base ^ power)
- * @base: base of the exponent
- * @power: power of the exponent
- *
- * Return: value of (base ^ power)
+ * print_binary - that prints the binary representation of a number
+ * @n: number
+ * Description: Write a function that prints
+ * Return:
  */
-unsigned long int _pow(unsigned int base, unsigned int power)
-{
-	unsigned long int numbre;
-	unsigned int aba;
 
-	numbre = 1;
-	for (aba = 1; aba <= power; aba++)
-		numbre *= base;
-	return (numbre);
-}
-
-/**
- * print_binary - prints a number in binary notation
- * @n: number to print
- *
- * Return: void
- */
 void print_binary(unsigned long int n)
 {
-	unsigned long int divi, checkcheck;
-	char frankaa;
+	unsigned long int sup = 2, rep = 0;
 
-	frankaa = 0;
-	divi = _pow(2, sizeof(unsigned long int) * 8 - 1);
-	while (divi != 0)
+	while (sup <= n && rep < 62)
 	{
-		check = n & divi;
-		if (checkcheck == divi)
+		sup = sup << 1;
+		rep++;
+	}
+
+	if (rep != 62)
+		sup = sup >> 1;
+
+	while (sup != 0)
+	{
+		if ((sup & n) != 0)
 		{
-			frankaa = 1;
+			rep++;
 			_putchar('1');
 		}
-		else if (frankaa == 1 || divi == 1)
+		else
 		{
+			rep++;
 			_putchar('0');
 		}
-		divi >>= 1;
+		sup = sup >> 1;
 	}
 }
