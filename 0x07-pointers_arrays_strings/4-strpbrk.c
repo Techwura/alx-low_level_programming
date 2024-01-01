@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _strpbrk - Entry point
  * @s: input
@@ -7,13 +7,13 @@ nclude "main.h"
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int k;
+	int pra;
 
 	while (*s)
 	{
-		for (k = 0; accept[k]; k++)
+		for (pra = 0; accept[pra]; pra++)
 		{
-			if (*s == accept[k])
+			if (*s == accept[pra])
 				return (s);
 		}
 		s++;
