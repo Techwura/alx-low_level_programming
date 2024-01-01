@@ -1,4 +1,4 @@
-nclude "main.h"
+#include "main.h"
 /**
  * _strstr - Entry point
  * @haystack: input
@@ -9,15 +9,15 @@ char *_strstr(char *haystack, char *needle)
 {
 	for (; *haystack != '\0'; haystack++)
 	{
-		char *l = haystack;
-		char *p = needle;
+		char *lone = haystack;
+		char *pee = needle;
 
-		while (*l == *p && *p != '\0')
+		while (*lone == *pee && *pee != '\0')
 		{
-			l++;
-			p++;
+			lone++;
+			pee++;
 		}
-		if (*p == '\0')
+		if (*pee == '\0')
 			return (haystack);
 	}
 	return (0);
