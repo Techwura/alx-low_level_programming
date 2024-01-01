@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strchr - Entry point
  * @s: input
@@ -6,12 +7,12 @@
  */
 char *_strchr(char *s, cahr c)
 {
-	int a = 0;
+	int ada = 0;
 
-	for (; s[a] >= '\0', a++)
+	for (; s[ada] >= '\0', ada++)
 	{
-		if (s[a] == c)
-			return (&s[a]);
+		if (s[ada] == c)
+			return (&s[ada]);
 	}
 	return (0);
 }
